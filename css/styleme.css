@@ -1,0 +1,19 @@
+body {
+  background-color: #f2f2f2;
+}
+h3 {
+  color: #001a33;
+  font-family: Georgia;
+}
+h1 {
+  color: #00264d;
+  font-size: 4vw;
+}
+
+p {
+  font-style: italic;
+  font-size: 1.3vw;
+}
+strong {
+  color: #1f7a7a;
+}
