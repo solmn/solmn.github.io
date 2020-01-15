@@ -41,7 +41,7 @@ a {
 
 .comment {
    background-color: yellow;
-
+   font-style: italic;
 }
 .ingredient {
   list-style-image: url('../images/recipeImages/pie_icon.gif');
