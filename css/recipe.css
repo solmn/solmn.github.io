@@ -42,7 +42,8 @@ a {
 .comment {
    background-color: yellow;
    font-style: italic;
+   margin-left: 30px;
 }
-.ingredient {
+.bullet ul {
   list-style-image: url('../images/recipeImages/pie_icon.gif');
 }
