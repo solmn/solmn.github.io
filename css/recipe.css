@@ -16,6 +16,7 @@ h1 {
   font-family: Lucida Sans Unicode, Helvetica, Arial, serif;
   font-size: 18pt;
   letter-spacing: 0.25em;
+  text-decoration: underline;
 }
 h1 span {
   background-color: #F0F0F0;
