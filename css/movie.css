@@ -13,7 +13,7 @@ body {
 
 h1 {
   font-size: 24pt;
-  font-style: Tahoma, Verdana, sans-serif;
+  font-family: Tahoma, Verdana, serif;
   text-shadow: 3px 3px #999999;
   text-align: center;
 }
@@ -45,30 +45,56 @@ h1 {
   float: right;
   width: 250px;
 }
-.review .r{
+
+#general dl dt{
+    margin-top: 10pt;
+    font-weight: bold;
+}
+#link {
+  list-style: none;
+  padding: 0px;
+}
+#pagination {
+  text-align: center;
+  background-color: #A2B964;
+  position: relative;
+  bottom: -107px;
+  padding: 7px;
+}
+
+#general dl {
+  padding-left: 10px;
+  font-size: 8pt;
+  font-family: Arial, sans-serif;
+}
+.review .comment{
    background-color:#E8DC9B;
    border: 2px solid gray;
    border-radius: 10px;
    font-size: 8pt;
    padding: 8px;
+   font-weight: bold;
 }
-.review .r img{
+
+.review .comment, .review .person {
+  max-width: 243px;
+  overflow: hidden;
+}
+.review .comment img, .review .person img{
   float: left;
   margin-right: 5px;
 }
 .review {
-  column-count: 2;
-  column-width: 255px;
-  column-gap: 11px;
-  clear: both;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-#overall span {
+.overall span {
   display: inline-block;
   font-size: 48pt;
   color: red;
   font-weight: bold;
-  vertical-align:top;
-
-#footer {
-  float: right;
-}
+    vertical-align:top;
+  }
