@@ -24,11 +24,14 @@ h1 {
   border: 4px solid gray;
   border-radius: 20px;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 550px auto;
+
 }
 
 #overall {
   max-width: 550px;
-  float: left;
+  /* float: left; */
 }
 
 #review {
@@ -42,7 +45,7 @@ h1 {
 }
 #general {
   background-color: #A2B964;
-  float: right;
+  /* float: right; */
   width: 250px;
 }
 
