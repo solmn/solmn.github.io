@@ -58,7 +58,7 @@ h1 {
   text-align: center;
   background-color: #A2B964;
   position: relative;
-  bottom: -107px;
+  bottom: -66px;
   padding: 7px;
 }
 
@@ -97,4 +97,7 @@ h1 {
   color: red;
   font-weight: bold;
     vertical-align:top;
+  }
+  #footer {
+    float: right;
   }
