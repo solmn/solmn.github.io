@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-size: 8pt;
+  font-family: Verdana, Tahoma, sans-serif;
+  background-image: url("../images/movie/background.png")
+}
+
+#header  {
+    text-align: center;
+    background-image: url("../images/movie/bannerbg.png");
+    background-repeat: repeat-x;
+}
+
+h1 {
+  font-size: 24pt;
+  font-style: Tahoma, Verdana, sans-serif;
+  text-shadow: 3px 3px #999999;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin:auto;
+  border: 4px solid gray;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#overall {
+  max-width: 550px;
+  float: left;
+}
+
+#review {
+  clear: both;
+
+}
+#overall .overall{
+  background-image: url('../images/movie/rbg.png');
+  background-repeat: repeat-x;
+  width: 100%;
+}
+#general {
+  background-color: #A2B964;
+  float: right;
+  width: 250px;
+}
+.review .r{
+   background-color:#E8DC9B;
+   border: 2px solid gray;
+   border-radius: 10px;
+   font-size: 8pt;
+   padding: 8px;
+}
+.review .r img{
+  float: left;
+  margin-right: 5px;
+}
+.review {
+  column-count: 2;
+  column-width: 255px;
+  column-gap: 11px;
+  clear: both;
+}
+#overall span {
+  display: inline-block;
+  font-size: 48pt;
+  color: red;
+  font-weight: bold;
+  vertical-align:top;
+
+#footer {
+  float: right;
+}
