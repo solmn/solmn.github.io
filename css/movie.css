@@ -102,5 +102,9 @@ h1 {
   vertical-align:top;
   }
   #footer {
-    float: right;
+    position: fixed;
+    opacity: 0.5;
+    bottom: 0;
+    padding: 0;
+    right: 0;
   }
