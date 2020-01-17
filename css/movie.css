@@ -62,7 +62,7 @@ h1 {
   background-color: #A2B964;
   position: relative;
   bottom: -66px;
-  padding: 7px;
+  padding: 1px;
 }
 
 #general dl {
@@ -99,7 +99,7 @@ h1 {
   font-size: 48pt;
   color: red;
   font-weight: bold;
-    vertical-align:top;
+  vertical-align:top;
   }
   #footer {
     float: right;
