@@ -101,7 +101,7 @@ h1 {
   font-weight: bold;
   vertical-align:top;
   }
-  #footer {
+#footer {
     position: fixed;
     opacity: 0.5;
     bottom: 0;
