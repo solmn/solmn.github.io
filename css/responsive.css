@@ -69,11 +69,14 @@ body {
   flex-wrap: wrap;
 }
 
-@media only screen and  (max-width: 600px) {
-  #col2 {
+@media (max-width: 600px) {
+  #col2, #col2_flex {
     width: 100%;
   }
-  #col1, #col3 {
+  #col1, #col3, #col3_flex, #col1_flex {
     width: 50%;
+  }
+  #col2_flex {
+    order: 3;
   }
 }
