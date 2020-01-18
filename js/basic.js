@@ -1,4 +1,5 @@
 function myTestAssert(expected, output) {
+  console.assert(expected === output, "TEST FAILD. expected " + expected  + " but found " + output)
   if (expected === output) {
     return "TEST SUCCEEDED";
   }
