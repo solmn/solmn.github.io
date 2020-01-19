@@ -30,7 +30,7 @@ window.onload = function() {
 
     console.log("Expected output of sum([1,2,3,4]) is 10 " + myTestAssert(10, sum([1,2,3,4])));
     document.getElementById("sum").innerHTML = "Expected output of sum([1,2,3,4]) is 10 " + myTestAssert(10, sum([1,2,3,4]));
-    console.log("Expected output of multiply([1,2,3,4]) is 10 " + myTestAssert(24, multiply([1,2,3,4])));
+    console.log("Expected output of multiply([1,2,3,4]) is 24 " + myTestAssert(24, multiply([1,2,3,4])));
     console.log("Expected output of reverse('Hello') is olleH " + myTestAssert('olleH', reverse("Hello")));
     document.getElementById("multiply").innerHTML = "Expected output of multiply([1,2,3,4]) is 24 " + myTestAssert(24, multiply([1,2,3,4]));
     document.getElementById("reverse").innerHTML = "Expected output of reverse('Hello') is olleH " + myTestAssert('olleH', reverse("Hello"));
