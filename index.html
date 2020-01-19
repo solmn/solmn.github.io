@@ -1,45 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/new.css" />
+    </head>
+    <body>
+      <button id="github">Github <i class="fa fa-github"></i></button>
+      <button id="stack" >Stack <i style="color:red" class="fa fa-stack-overflow"></i></button>
 
-  <head>
-    <meta charset="utf-8">
-    <title>My homepage</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-  </head>
-  <body>
-    <div class="header">
-        <img  src="images/sol.JPG" width="180" height="180" alt="solomon mehari" />
-    </div>
-    <div class="nav">
-      <h1>Solomon Mehari</h1>
-      <ul>
-          <li>
-            <a href=""> W1D1 - Homepage </a>
-          </li>
-          <li>
-            <a href="aboutme.html"> W1D2 - About Me </a>
-          </li>
-          <li>
-            <a href="pie.html"> W1D3 - Recipe </a>
-          </li>
-          <li>
-            <a href="tmnt.html"> W1D4 - Movie Review </a>
-          </li>
-          <li>
-            <a href="responsive.html"> W1D5 - Responsive </a>
-          </li>
+        <div class="container">
+          <img id="background" src="images/o.jpg" alt="Notebook" >
+          <div class="content">
+            <img class="profile" src="images/sol.JPG" width="140" height="140" alt="solomon mehari" />
+            <div id="c">
+              <h2>Solomon Mehari</h2>
+              <h4>Maharshi International University</h4>
+              <h4>610700</h4>
+              <p>My name is solomon, I am from Ethiopia. I have Bsc Degree in Software Engineering.
+                I have 2 years of experiance in machine learning and artificial intelligence.
+              currently I am studying my masters degree in computer science at Maharshi International University </p>
+            </div>
+          </div>
 
-          <li>
-            <a href="task.html"> W1D5 - Tasks </a>
-          </li>
-          <li>
-            <a href="basicjs.html"> W1D5 - Basic javascript </a>
-          </li>
-      </ul>
-    </div>
+        </div>
+        <div class="main">
+            <h2>PORTFOLIO(WAP)</h2>
+            <hr>
+            <div class="column">
+              <div class="cont">
+                <h3>HTML</h3>
+                <div class="sidenav">
+                  <a href="index.html">W1D1 - Homepage</a>
+                  <a href="aboutme.html">W1D2 - About Me</a>
+                  <a href="pie.html">W1D3 - Recipe</a>
+                </div>
+              </div>
+            </div>
 
-    <a href="https://validator.w3.org/check/referer">
-      <img src="http://mumstudents.org/cs472/2013-09/images/w3c-html.png" alt="Validate"  />
-    </a>
-  </body>
+            <div class="column" style="margin-left: 10px">
+              <div class="cont">
+                <h3>CSS</h3>
+                <div class="sidenav">
+                  <a href="tmnt.html">W1D4 - Movie Review</a>
+                  <a href="responsive.html">W1D5 - Responsive</a>
+                  <a href="task.html">W1D5 - Tasks</a>
+                </div>
+              </div>
+            </div>
+            <div class="column" style="margin-left: 10px">
+              <div class="cont">
+                <h3>JavaScript</h3>
+                <div class="sidenav">
+                  <a href="basicjs.html">W1D5 - Basic javascript</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div style="margin-top: 110px;background-color:#bdbdbd; height:40px;padding:10px">
+          <a href="https://validator.w3.org/check/referer">
+            <img src="http://mumstudents.org/cs472/2013-09/images/w3c-html.png" alt="Validate"  />
+          </a>
+        </div>
+
+
+    </body>
 </html>
