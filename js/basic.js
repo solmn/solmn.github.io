@@ -8,6 +8,7 @@ function myTestAssert(expected, output) {
   }
 }
 
+
 function max (x, y) {
       if (x > y) {
         return x;
@@ -75,8 +76,10 @@ function productOfAll (a) {
 }
 
 console.log("Expected output of max(3, 4) is 4 " + myTestAssert(4, max(3, 4)));
+document.getElementById("max").innerHTML = "Expected output of max(3, 4) is 4 " + myTestAssert(4, max(3, 4));
 console.log('-------------------------------------------------------------------------------------\n')
 console.log("Expected output of maxOfThree(3, 4, 5) is 5 " + myTestAssert(5, maxOfThree(3,  4, 5)));
+document.getElementById("maxOfThree").innerHTML = "Expected output of maxOfThree(3, 4, 5) is 5 " + myTestAssert(5, maxOfThree(3,  4, 5));
 console.log("Expected output of maxOfThree(6, 5, 4) is 6 " + myTestAssert(6, maxOfThree(6,  5, 4)));
 console.log("Expected output of maxOfThree(2, 5, 3) is 5 " + myTestAssert(5, maxOfThree(2,  5, 3)));
 console.log("Expected output of maxOfThree(2, 2, 2) is 2 " + myTestAssert(2, maxOfThree(2,  2, 2)));
@@ -84,33 +87,44 @@ console.log("Expected output of maxOfThree(-30, 20, 10) is 20 " + myTestAssert(2
 
 console.log('-------------------------------------------------------------------------------------\n')
 console.log("Expected output of isVowel('i') is true " + myTestAssert(true, isVowel('i')));
+document.getElementById("isVowel").innerHTML = "Expected output of isVowel('i') is true " + myTestAssert(true, isVowel('i'));
 console.log("Expected output of isVowel('u') is true " + myTestAssert(true, isVowel('u')));
 console.log("Expected output of isVowel('e') is true " + myTestAssert(true, isVowel('e')));
 console.log("Expected output of isVowel('d') is false " + myTestAssert(false, isVowel('d')));
 
 console.log('-------------------------------------------------------------------------------------\n')
 console.log("Expected output of sum([1,2,3,4]) is 10 " + myTestAssert(10, sum([1,2,3,4])));
+document.getElementById("sum1").innerHTML = "Expected output of sum([1,2,3,4]) is 10 " + myTestAssert(10, sum([1,2,3,4]));
+
 
 console.log('-------------------------------------------------------------------------------------')
 console.log("Expected output of multiply([1,2,3,4]) is 24 " + myTestAssert(24, multiply([1,2,3,4])));
+document.getElementById("multiply1").innerHTML = "Expected output of multiply([1,2,3,4]) is 24 " + myTestAssert(24, multiply([1,2,3,4]));
+
 
 console.log('-------------------------------------------------------------------------------------')
 console.log("Expected output of reverse('jag testar') is  ratset gaj " + myTestAssert("ratset gaj", reverse("jag testar")));
+document.getElementById("reverse1").innerHTML = "Expected output of reverse('Hello') is olleH " + myTestAssert('olleH', reverse("Hello"));
 
 console.log('-------------------------------------------------------------------------------------')
 console.log("Expected output of findLongestWord(['abc', 'abcd', 'abcde']) is  5 " + myTestAssert(5, findLongestWord(['abc', 'abcd', 'abcde'])));
+document.getElementById("findL").innerHTML = "Expected output of findLongestWord(['abc', 'abcd', 'abcde']) is  5 " + myTestAssert(5, findLongestWord(['abc', 'abcd', 'abcde']));
 
 console.log('-------------------------------------------------------------------------------------')
 console.log("Expected output of filterLongWords(['abc', 'abcd', 'abcde'], 3) is  ['abcd', 'abcde'] " + myTestAssert(JSON.stringify(['abcd', 'abcde']), JSON.stringify(filterLongWords(['abc', 'abcd', 'abcde'], 3))));
+document.getElementById("filter1").innerHTML = "Expected output of filterLongWords(['abc', 'abcd', 'abcde'], 3) is  ['abcd', 'abcde'] " + myTestAssert(JSON.stringify(['abcd', 'abcde']), JSON.stringify(filterLongWords(['abc', 'abcd', 'abcde'], 3)));
 
 console.log('--------------------------------------------------------------------------------------')
 console.log("Expected output of multiplyByTen([1, 2, 3, 4, 5]) is  [10, 20, 30, 40, 50] " + myTestAssert(JSON.stringify([10, 20, 30, 40, 50]), JSON.stringify(multiplyByTen([1, 2, 3, 4, 5]))));
+document.getElementById("mul").innerHTML = "Expected output of multiplyByTen([1, 2, 3, 4, 5]) is  [10, 20, 30, 40, 50] " + myTestAssert(JSON.stringify([10, 20, 30, 40, 50]), JSON.stringify(multiplyByTen([1, 2, 3, 4, 5])));
 
 console.log('--------------------------------------------------------------------------------------')
 console.log("Expected output of filterEqualToNumber([1, 2, 3, 4, 5]) is  [10, 20, 30, 40, 50] " + myTestAssert(JSON.stringify([3]), JSON.stringify(filterEqualToNumber([1, 2, 3, 4, 5]))));
+document.getElementById("filEq").innerHTML = "Expected output of filterEqualToNumber([1, 2, 3, 4, 5]) is  [10, 20, 30, 40, 50] " + myTestAssert(JSON.stringify([3]), JSON.stringify(filterEqualToNumber([1, 2, 3, 4, 5])));
 
 console.log('--------------------------------------------------------------------------------------')
 console.log("Expected output of multiplyByTen([1, 2, 3, 4, 5]) is  [10, 20, 30, 40, 50] " + myTestAssert(JSON.stringify([10, 20, 30, 40, 50]), JSON.stringify(multiplyByTen([1, 2, 3, 4, 5]))));
 
 console.log('--------------------------------------------------------------------------------------')
 console.log("Expected output of productOfAll([1,2,3,4]) is 24 " + myTestAssert(24, productOfAll([1,2,3,4])));
+document.getElementById("prod").innerHTML = "Expected output of productOfAll([1,2,3,4]) is 24 " + myTestAssert(24, productOfAll([1,2,3,4]));

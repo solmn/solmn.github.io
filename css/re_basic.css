@@ -1,0 +1,40 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+body {
+  margin:0;
+  background-color: #ececec;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  max-width: 70%;
+
+  margin: auto;
+  padding: 20px;
+  margin-top: 20px;
+}
+.section {
+  padding: 10px;
+    background-color: white;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    box-shadow: 0 7px 11px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+
+.section > p {
+   color: orange;
+   font-weight: bold;
+   color: #1f7179;
+   margin-top: 5px;
+}
+
+.more {
+  margin-top: 10px;
+  font-size: 20pt;
+  color: orange;
+  font-weight: bold;
+}
