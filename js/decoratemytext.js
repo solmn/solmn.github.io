@@ -9,10 +9,6 @@ window.onload = function() {
 
   const pigLatinButton = document.getElementById("pigLatinButton");
   const textArea = document.getElementById("myText");
-  // pigLatinButton.onclick = () => textArea.value = pigLatin(textArea.value);
-
-  const malkovichButton = document.getElementById("malkovichButton");
-  malkovichButton.onclick = () => textArea.value = malkovitch(textArea.value);
   pigLatinButton.onclick = function() {
     const sen = textArea.value.trim().split("\n");
     let n = "";
@@ -21,6 +17,19 @@ window.onload = function() {
     }
     textArea.value = n;
   }
+  // pigLatinButton.onclick = () => textArea.value = pigLatin(textArea.value);
+
+  const malkovichButton = document.getElementById("malkovichButton");
+  // malkovichButton.onclick = () => textArea.value = malkovitch(textArea.value);
+  malkovichButton.onclick = function()  {
+    const sen = textArea.value.trim().split("\n");
+    let n = "";
+    for (let i = 0; i < sen.length; i++) {
+       n = n + "\n" + malkovitch(sen[i]);
+    }
+    textArea.value = n;
+  }
+
 
 
   function decorate () {
