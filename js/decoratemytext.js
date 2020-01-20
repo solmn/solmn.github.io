@@ -9,10 +9,18 @@ window.onload = function() {
 
   const pigLatinButton = document.getElementById("pigLatinButton");
   const textArea = document.getElementById("myText");
-  pigLatinButton.onclick = () => textArea.value = pigLatin(textArea.value);
+  // pigLatinButton.onclick = () => textArea.value = pigLatin(textArea.value);
 
   const malkovichButton = document.getElementById("malkovichButton");
   malkovichButton.onclick = () => textArea.value = malkovitch(textArea.value);
+  pigLatinButton.onclick = function() {
+    const sen = textArea.value.trim().split("\n");
+    let n = "";
+    for (let i = 0; i < sen.length; i++) {
+       n = n + "\n" + pigLatin(sen[i]);
+    }
+    textArea.value = n;
+  }
 
 
   function decorate () {
@@ -56,13 +64,19 @@ function pigLatin (text) {
       }
       else {
         let index = 0;
-        for (let j = 0; j < word.length; j++) {
-          if (isVowel(word[j])) {
+        let word_ = word.trim();
+        for (let j = 0; j < word_.length; j++) {
+          if (isVowel(word_[j])) {
             index = j;
             break;
           }
         }
-        newWords.push(firstUpperCase(word.trim().slice(index) + word.trim().slice(0, index) + "ay"));
+        if (index === 0 && /\d+/g .test(word_[0])) {
+          newWords.push(word_);
+        }
+        else {
+          newWords.push(firstUpperCase(word_.trim().slice(index) + word_.trim().slice(0, index) + "ay"));
+        }
       }
     });
     return newWords.join(" ");
