@@ -1,4 +1,6 @@
 window.onload = function() {
+  "use strict";
+
   const FontSize = {
     "Tiny": "7pt",
     "Small": "10pt",
@@ -11,8 +13,12 @@ window.onload = function() {
   var startButton = document.getElementById("start");
   var stopButton = document.getElementById("stop");
   var animationSelect = document.getElementById("animation");
-  animationSelect.onchange = ()=> {clear();
-       textarea.value = ANIMATIONS[animationSelect.value].split('=====\n')[0];}
+  animationSelect.onchange = ()=> {
+       stop=true;
+       clear();
+       textarea.value = ANIMATIONS[animationSelect.value].split('=====\n')[0];
+       startButton.disabled = false;
+       }
   var turbo = document.getElementById("turbo");
   turbo.onchange = () => {clear(); start();}
   var fontSizeSelect = document.getElementById("fontsize");
@@ -21,6 +27,7 @@ window.onload = function() {
   startButton.onclick = start;
 
   function start() {
+    startButton.disabled = true;
     stop = false;
     if (animationSelect.value !== "Blank") {stopButton.disabled = false;}
     const doAnimation = animate(animationSelect.value)
@@ -28,6 +35,7 @@ window.onload = function() {
   }
 
   function clear() {
+    stopButton.disabled = true;
     clearInterval(interval);
     textarea.value = "";
   }
@@ -53,5 +61,5 @@ window.onload = function() {
   }
 
 
-  stopButton.onclick = () => {stop = true; stopButton.disabled = stop;}
+  stopButton.onclick = () => {stop = true; stopButton.disabled = stop; startButton.disabled = false;}
 }
