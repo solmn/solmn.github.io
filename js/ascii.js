@@ -13,18 +13,45 @@ window.onload = function() {
   var startButton = document.getElementById("start");
   var stopButton = document.getElementById("stop");
   var animationSelect = document.getElementById("animation");
+  var turbo = document.getElementById("turbo");
+  var fontSizeSelect = document.getElementById("fontsize");
+  let stop = false;
+  var interval;
+  turbo.onchange = () => {
+    clear();
+    start();
+  }
+  startButton.onclick = start;
   animationSelect.onchange = ()=> {
        stop=true;
        clear();
        textarea.value = ANIMATIONS[animationSelect.value].split('=====\n')[0];
        startButton.disabled = false;
        }
-  var turbo = document.getElementById("turbo");
-  turbo.onchange = () => {clear(); start();}
-  var fontSizeSelect = document.getElementById("fontsize");
-  let stop = false;
-  var interval;
-  startButton.onclick = start;
+ fontSizeSelect.onchange = () => textarea.style.fontSize = FontSize[fontSizeSelect.value];
+
+ stopButton.onclick = () => {
+   stop = true;
+   stopButton.disabled = stop;
+   startButton.disabled = false;
+ }
+ function animate (type) {
+   const anim = ANIMATIONS[type].split('=====\n');
+   let animationIndex = 0;
+   return function () {
+     if (stop) {
+       animationIndex = 0;
+       textarea.value = anim[animationIndex];
+       return;
+     }
+     textarea.value = anim[animationIndex];
+     animationIndex = animationIndex + 1;
+     if (animationIndex == anim.length) {
+       animationIndex = 0;
+     }
+   }
+
+ }
 
   function start() {
     startButton.disabled = true;
@@ -39,27 +66,4 @@ window.onload = function() {
     clearInterval(interval);
     textarea.value = "";
   }
-
-  fontSizeSelect.onchange = () => textarea.style.fontSize = FontSize[fontSizeSelect.value];
-
-  function animate (type) {
-    const anim = ANIMATIONS[type].split('=====\n');
-    let animationIndex = 0;
-    return function () {
-      if (stop) {
-        animationIndex = 0;
-        textarea.value = anim[animationIndex];
-        return;
-      }
-      textarea.value = anim[animationIndex];
-      animationIndex = animationIndex + 1;
-      if (animationIndex == anim.length) {
-        animationIndex = 0;
-      }
-    }
-
-  }
-
-
-  stopButton.onclick = () => {stop = true; stopButton.disabled = stop; startButton.disabled = false;}
 }
