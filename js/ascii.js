@@ -11,7 +11,8 @@ window.onload = function() {
   var startButton = document.getElementById("start");
   var stopButton = document.getElementById("stop");
   var animationSelect = document.getElementById("animation");
-  animationSelect.onchange = ()=> clear();
+  animationSelect.onchange = ()=> {clear();
+       textarea.value = ANIMATIONS[animationSelect.value].split('=====\n')[0];}
   var turbo = document.getElementById("turbo");
   turbo.onchange = () => {clear(); start();}
   var fontSizeSelect = document.getElementById("fontsize");
