@@ -75,7 +75,7 @@
             t = t.rest;
             i++;
         }
-        if(i == j) {return t.value;}
+        if(i === j) {return t.value;}
         return undefined;
     }
 
@@ -128,7 +128,7 @@
         context("when [1, 2, 3, 4, 5]", function() {
             it("the the result is [5, 4, 3, 2, 1]", function() {
                 let v = [1, 2, 3, 4, 5];
-                reverseArrayInPlace(v)
+                reverseArrayInPlace(v);
                 assert.equal(JSON.stringify([5, 4, 3, 2, 1]), JSON.stringify(v));
             });
         });
@@ -209,6 +209,6 @@
         });
 
     });
-    
+
 
 }());
