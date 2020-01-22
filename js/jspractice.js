@@ -202,11 +202,6 @@
                 assert.isTrue(deepEqual({a:5, b:6, c: {e:8}}, {a:5, b:6, c: {e:8}}));
             });
         });
-
-    });
-
-    describe("Deep equal", function() {
-
         context("when {a:5, b:6, c: {e:8}} and {a:5, b:6}  is entered", function() {
             it("the the result is false", function() {
                 assert.isFalse(deepEqual({a:5, b:6, c: {e:8}}, {a:5, b:6}));
@@ -214,5 +209,6 @@
         });
 
     });
+    
 
 }());
