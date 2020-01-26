@@ -1,13 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <script src="js/prototype.js">
 
+<head>
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
     </script>
-    <title>ProtoType inheritance</title>
-  </head>
-  <body>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+</head>
 
-  </body>
+<body>
+  <img style="margin-left: 60px" src="images/mocha.png" width="85px" alt="mocha">
+  <img src="images/chai.jpg" width="100px" alt="chai.jpg">
+<script src="js/prototype.js"> </script>
+
+<div id="mocha"></div>
+
+<!-- run tests! -->
+<script>
+    mocha.run();
+</script>
+</body>
 </html>
