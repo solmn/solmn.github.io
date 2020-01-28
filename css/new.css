@@ -30,7 +30,8 @@ body {
 .main {
   padding: 20px;
   background-color: #f1f1f1;
-  height: 200px;
+  max-width: 70%;
+  margin: auto;
 
 }
 button {
@@ -78,7 +79,7 @@ button {
 }
 
 .row {
-  margin: 8px -16px;
+  margin: 8px -10px;
 }
 
 .row,
@@ -89,7 +90,7 @@ button {
 .column {
   margin-top: 10px;
   float: left;
-  width: 20%;
+  width: 28%;
   box-shadow: 0 7px 11px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
 }
 
