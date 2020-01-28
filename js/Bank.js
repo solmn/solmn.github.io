@@ -36,4 +36,12 @@ class Bank {
     }
     return r;
    }
+
+   endOfMonth() {
+     String r = "";
+     for (let a of this._accounts) {
+       r += a.endOfMonth();
+     }
+   }
+   return r;
 }
