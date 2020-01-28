@@ -1,3 +1,6 @@
+"use strict";
+
+
 class CheckingAccount extends Account {
   constructor(accountNumber) {
      super(accountNumber);
