@@ -1,4 +1,6 @@
 $(function(){
+  "use strict";
+  
   $("div#emo").css("display", "none");
   let isStart = false;
 
