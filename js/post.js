@@ -1,7 +1,7 @@
 $(function(){
   $('#fetch').click(function() {
      let id = $('#input').val();
-     $.ajax("http://jsonplaceholder.typicode.com/users?id=" + id, {
+     $.ajax("https://jsonplaceholder.typicode.com/users?id=" + id, {
        "type": "get"
      }).done(function(data) {
        let r = "<dl>";
@@ -14,7 +14,7 @@ $(function(){
        $("#info").html(r);
 
      });
-   $.ajax("http://jsonplaceholder.typicode.com/posts?userId=" + id, {
+   $.ajax("https://jsonplaceholder.typicode.com/posts?userId=" + id, {
      "type": "get"
    }).done(function(data) {
        let r = data.reduce((prev, obj)=> prev += "<ul>" + process(obj) + "</ul>" + "<button>comment</button>", "")
